@@ -1,0 +1,39 @@
+{
+  "name": "purgecss-tryout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "put-version": "put-version ./docs/index.html",
+    "build": "npm run put-version && webpack -p",
+    "watch": "webpack -d --watch",
+    "serve": "servor ./docs/ index.html 8080",
+    "start": "concurrently \"npm run serve\" \"npm run watch\" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.1",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.1.0",
+    "css-loader": "^3.4.2",
+    "glob-all": "^3.2.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "purgecss-webpack-plugin": "^2.1.0",
+    "put-version": "^1.0.10",
+    "servor": "^3.2.0",
+    "terser-webpack-plugin": "^2.3.5",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
